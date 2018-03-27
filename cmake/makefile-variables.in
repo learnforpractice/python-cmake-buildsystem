@@ -124,7 +124,7 @@ EXEMODE=    755
 FILEMODE=    644
 
 # configure script arguments
-CONFIG_ARGS=	 '--prefix' '@CMAKE_INSTALL_PREFIX@'
+CONFIG_ARGS=	 '--prefix' '@PYTHON_INSTALL_PREFIX@'
 
 # Subdirectories with code
 SRCDIRS= 	Parser Grammar Objects Python Modules Mac
