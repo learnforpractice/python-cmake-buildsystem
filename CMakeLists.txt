@@ -41,7 +41,7 @@ include(CMakeParseArguments)
 include(CTest)
 
 # Options
-option(DOWNLOAD_SOURCES "Automatically download the Python sources" ON)
+option(DOWNLOAD_SOURCES "Automatically download the Python sources" OFF)
 set(_build_libpython_shared_default  0)
 set(_build_libpython_shared_desc "Build libpython as a shared library")
 
@@ -160,6 +160,7 @@ set(_landmark "pyconfig.h.in") # CMake will look for this file.
 if(NOT (SRC_DIR AND EXISTS ${SRC_DIR}/${_landmark}))
     foreach(dirname
         ${CMAKE_CURRENT_SOURCE_DIR}
+        ${CMAKE_CURRENT_SOURCE_DIR}/..
         ${CMAKE_CURRENT_SOURCE_DIR}/cpython-${PY_VERSION}
         ${CMAKE_CURRENT_SOURCE_DIR}/Python-${PY_VERSION}
         ${CMAKE_CURRENT_BINARY_DIR}/../cpython-${PY_VERSION}
