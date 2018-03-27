@@ -270,7 +270,7 @@ if(NOT DEFINED _download_${PY_VERSION}_md5)
 endif()
 
 # Apply patches
-option(PYTHON_APPLY_PATCHES "Apply patches" ON)
+option(PYTHON_APPLY_PATCHES "Apply patches" OFF)
 if(PYTHON_APPLY_PATCHES)
   include(cmake/PythonApplyPatches.cmake)
 endif()
